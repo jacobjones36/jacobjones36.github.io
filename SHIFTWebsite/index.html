@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHIFT</title>
+    <title>Your Business Name</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -29,7 +29,6 @@
         }
         input[type="text"],
         input[type="email"],
-        input[type="text"],
         input[type="submit"] {
             display: block;
             width: 100%;
@@ -42,23 +41,33 @@
             border: none;
             cursor: pointer;
         }
+        .message {
+            display: none;
+            color: green;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="shiftlogo.jpg" alt="Your Business Logo">
-        <h1>S.H.I.F.T.</h1>
-        <h4>Supply Hub and Inventory Flow Tracker</h4>
+        <img src="your-logo-url.png" alt="Your Business Logo">
+        <h1>Your Business Name</h1>
     </header>
     <main>
         <p>We value your feedback! Please fill out our <a href="your-survey-link.com">survey</a>.</p>
-        <h3>Or leave your information below and we'll get back to you</h3>
-        <form action="/" method="post">
+        <form id="contact-form">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
-            <input type="text" name="comments" placeholder="Any comments">
             <input type="submit" value="Submit">
         </form>
+        <p class="message" id="success-message">Submitted successfully!</p>
     </main>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('success-message').style.display = 'block';
+            this.reset();
+        });
+    </script>
 </body>
 </html>
