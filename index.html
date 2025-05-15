@@ -72,7 +72,7 @@
             const dedupId = `${data.reduction_id}-${timestamp}`;
             const payload = JSON.stringify(data);
 
-            console.log('Sending request to: https://webhooks.workato.com/webhooks/rest/df8233f0-887c-4239-89de-c13afcce444f/manual-reduction');
+            console.log('Sending request to: https://jacobjones36.github.io/proxy.php');
             console.log('Payload:', payload);
             console.log('Headers:', {
                 'Content-Type': 'application/json',
@@ -80,7 +80,7 @@
             });
 
             try {
-                const response = await fetch('https://webhooks.workato.com/webhooks/rest/df8233f0-887c-4239-89de-c13afcce444f/manual-reduction', {
+                const response = await fetch('https://jacobjones36.github.io/proxy.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
