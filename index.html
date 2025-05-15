@@ -72,7 +72,7 @@
             const dedupId = `${data.reduction_id}-${timestamp}`;
             const payload = JSON.stringify(data);
 
-            console.log('Sending request to: https://your-workato-webhook-url');
+            console.log('Sending request to: https://webhooks.workato.com/webhooks/rest/df8233f0-887c-4239-89de-c13afcce444f/manual-reduction');
             console.log('Payload:', payload);
             console.log('Headers:', {
                 'Content-Type': 'application/json',
